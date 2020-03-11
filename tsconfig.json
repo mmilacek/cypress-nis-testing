@@ -1,0 +1,11 @@
+{
+    "include": [
+      "node_modules/cypress",
+      "cypress/**/*.ts",
+      "support/*.ts",
+      "node_modules/cypress-xpath", "cypress/support/utils.js", "cypress/support/utils.js"
+    ],
+    "compilerOptions": {
+      "lib": ["es2015", "dom"]
+    }
+}

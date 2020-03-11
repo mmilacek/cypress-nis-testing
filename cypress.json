@@ -1,0 +1,12 @@
+{
+  "video": true,
+  "screenshots": true,
+  "viewportHeight": 800,
+  "viewportWidth": 1280,
+  "chromeWebSecurity": false,
+  "X-Frame-Options": true,
+  "defaultCommandTimeout": 7000,
+  "responseTimeout": 40000,
+  "pageLoadTimeout": 20000,
+  "projectId": "7darfy"
+}
