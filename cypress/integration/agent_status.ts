@@ -116,6 +116,11 @@ describe('TEST: agent/status/create', () => {
 })
 
 describe('TEST: agent/status/update', () => {
+    beforeEach(() => {
+        /*** navigate to form ***/
+            cy.navigateToSub(navigate.menu, navigate.submenu);
+    })
+
     it('TEST: update', () => {
         /*** create item ***/
             cy.createItem(props);

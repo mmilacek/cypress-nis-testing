@@ -1,14 +1,18 @@
 # dependencies
 /node_modules
 
-#cypress
+# cypress
 cypress/videos
 cypress/screenshots
+cypress/reports
 cypress.env.json
+
+# logs
+cypress/logs
 
 # misc
 yarn-debug.log*
 yarn-error.log*
 
-#package-lock
+# package-lock
 package-lock.json

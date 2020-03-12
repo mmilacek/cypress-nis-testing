@@ -8,5 +8,9 @@
   "defaultCommandTimeout": 7000,
   "responseTimeout": 40000,
   "pageLoadTimeout": 20000,
-  "projectId": "7darfy"
+  "projectId": "7darfy",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+      "configFile": "reporterOpts.json"
+  }
 }

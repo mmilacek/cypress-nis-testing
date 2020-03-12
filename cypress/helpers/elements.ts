@@ -26,6 +26,10 @@ export const form = {
         submit: 'button[name="action[save]"]',
     },
 
+    extended: {
+        history: '.fa.fa-clock-o'
+    },
+
     message: {
         submitSuccess: '.alert.alert-success',
         submitSuccessText: 'Dáta boli úspečne uložené.',
@@ -73,7 +77,7 @@ export const agentStatus = {
     }
 };
 
-export var agentPosition = {
+export const agentPosition = {
     navigate: {
         menu: '.fa.fa-briefcase',
         submenu: 'Agent_position',
@@ -121,5 +125,60 @@ export var agentPosition = {
             id: '#id_old_mlm', 
             type: 'readonly'
         }
+    }
+};
+
+export const moneyExtra = {
+    navigate: {
+        menu: '.fa.fa-money',
+        submenu: 'Extra'
+    },
+
+    options: {
+        logs: true
+    },
+
+    props: {
+        id: {
+            id: '#id', 
+            type: 'readonly'
+        },
+        
+        value: {
+            id: '#value', 
+            type: 'input',
+            inList: true,
+            filter: true,
+            formValueCreate: generateRandomFloat(),
+            formValueUpdate: generateRandomFloat()
+        },
+        
+        description: {
+            id: '#description', 
+            type: 'input',
+            alias: true,
+            inList: true,
+            filter: true,
+            formValueCreate: generateRandomString(8),
+            formValueUpdate: generateRandomString(8)
+        },
+
+        date: {
+            id: '#date', 
+            type: 'date',
+            inList: true,
+            filter: true,
+            formValueCreate: '2020-03-04',
+            formValueUpdate: '2021-04-20'
+        },
+
+        agent: {
+            id: '.fstQueryInput.fstQueryInputExpanded', 
+            type: 'input-select',
+            inList: false,
+            filter: false,
+            formValueCreate: 'Havetta',
+            formValueUpdate: 'Havetta'
+        },
     }
 };

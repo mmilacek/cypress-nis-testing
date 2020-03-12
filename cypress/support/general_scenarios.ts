@@ -19,7 +19,7 @@ declare global {
 export const placeholderMethod = () => {};
 
 Cypress.Commands.add('login', () => {
-    cy.visit(Cypress.env('url'));
+    cy.visit('/');
 
     const username = Cypress.env('username');
     const password = Cypress.env('password');

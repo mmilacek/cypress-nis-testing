@@ -1,4 +1,6 @@
 import * as _ from 'lodash';
+import 'cypress-plugin-tab';
+
 import generateRandomString, { generateRandomFloat } from './utils';
 import { list } from '../helpers/elements';
 
@@ -61,6 +63,15 @@ Cypress.Commands.add('fillForm', (form: any, formAction: string) => {
     _.forEach(form, item => {
         if(item.type == 'input'){
             cy.get(item.id).clear().type(formAction == 'create' ? item.formValueCreate : item.formValueUpdate);
+        
+        }else if(item.type == 'date'){
+            cy.get(item.id).clear().type(formAction == 'create' ? item.formValueCreate : item.formValueUpdate);
+        
+        }else if(item.type == 'input-select' && formAction == 'create'){
+            cy.get(item.id)
+                .type(item.formValueCreate)
+                .wait(2000)
+                .type('{downarrow}{enter}{esc}');
         }
     });
 });

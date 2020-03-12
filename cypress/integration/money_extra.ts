@@ -1,13 +1,13 @@
 import generateRandomString, { generateRandomFloat, getAliasValue } from '../support/utils';
-import { form, agentPosition, list } from '../helpers/elements';
+import { form, moneyExtra, list } from '../helpers/elements';
 
-const navigate = agentPosition.navigate;
-const props = agentPosition.props;
+const navigate = moneyExtra.navigate;
+const props = moneyExtra.props;
 
 const aliasCreate = getAliasValue(props, 'create');
 const aliasUpdate = getAliasValue(props, 'update');
 
-describe('TEST: agent/position/create', () => {
+describe('TEST: money/extra/create', () => {
     beforeEach(() => {
         /*** navigate to form ***/
             cy.navigateToSub(navigate.menu, navigate.submenu);
@@ -87,18 +87,15 @@ describe('TEST: agent/position/create', () => {
             cy.submitForm(false);
 
         /*** fill shortName in ***/
-            const shortName = generateRandomString(7);
-            cy.get(props.short_name.id).type(shortName);
+            const value = generateRandomFloat();
+            cy.get(props.value.id).type(value);
 
         /*** submit the form ***/
             cy.submitForm(false);
 
-        /*** fill name in ***/
-            const name = generateRandomString(8);
-            cy.get(props.name.id).type(name);
+            cy.get(form.message.submitFail).should('exist').contains(form.message.validateText);
+            cy.get(form.message.validate).contains('Pole agent id je vyžadované.');
 
-        /*** submit the form ***/
-            cy.submitForm(false);
     })
 
     it('TEST: values', () => {
@@ -106,32 +103,19 @@ describe('TEST: agent/position/create', () => {
             cy.create();
 
         /*** fill the form in (short_name lenght is over 7) ***/
-            let shortName = generateRandomString(10);
-            cy.get(props.short_name.id).type(shortName);
+            const value = '100001';
+            cy.get(props.value.id).type(value);
 
-            const name = generateRandomString(8);
-            cy.get(props.name.id).type(name);
-
-            var bankUnitValue = generateRandomFloat();
-            cy.get(props.bank_unit_value.id).type(bankUnitValue);
+            const agent = generateRandomString(8);
+            cy.get(props.agent.id).type(agent).wait(1000);
 
         /*** submit the form ***/
             cy.submitForm(false);
             
             cy.get(form.message.submitFail).should('exist').contains(form.message.validateText);
-            cy.get(form.message.validate).contains('Hodnota pola short name nesmie byť väčšia ako 7 characters.');
+            cy.get(form.message.validate).contains('Pole agent id je vyžadované.');
+            cy.get(form.message.validate).contains('Hodnota pola value musí byť medzi -100000 and 100000.00.');
 
-        /*** fill the form in (short_name lenght is  7) ***/
-            shortName = generateRandomString(7);
-            cy.get(props.short_name.id).clear().type(shortName);
-
-            bankUnitValue = generateRandomString(7);
-            cy.get(props.bank_unit_value.id).clear().type(bankUnitValue);
-
-        /*** submit the form ***/
-            cy.submitForm(true);
-
-            cy.get(props.bank_unit_value.id).should('have.value', '0.00');
     })
 
     it('TEST: buttons', () => {
@@ -238,6 +222,8 @@ describe('TEST: agent/position/update', () => {
             cy.checkListData(props, 'create', 'not.contain.text', 1);
     })
 })
+
+
 
 
 
