@@ -1,10 +1,19 @@
 # cypress-nis-testing
 
-npm install --save-dev @cypress/webpack-preprocessor
-npm install --save-dev webpack
-npm install --save-dev ts-loader
-npm install --save-dev typescript
-npm install --save-dev lodash
+UI functional, regression and visual testing of NIS in Cypress.
 
-npm i @types/jest
-yarn
+## Installation
+
+Simply clone the repo and run:
+
+```shell
+npm install
+```
+
+## Execution
+
+Run all tests:
+
+```shell
+npx cypress run --env username=<username>,password=<password> --config baseUrl=<nis-url>
+```
