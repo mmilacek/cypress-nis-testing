@@ -1,6 +1,6 @@
 {
-  "video": true,
-  "screenshots": true,
+  "video": false,
+  "screenshots": false,
   "viewportHeight": 800,
   "viewportWidth": 1280,
   "chromeWebSecurity": false,

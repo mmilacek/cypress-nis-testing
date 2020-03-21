@@ -18,7 +18,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^3.4.2",
-    "cypress": "^3.8.3",
+    "cypress": "^4.1.0",
     "cypress-failed-log": "^2.6.2",
     "cypress-multi-reporters": "^1.2.4",
     "cypress-plugin-tab": "^1.0.5",
