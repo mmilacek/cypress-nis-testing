@@ -1,6 +1,6 @@
 {
-  "video": false,
-  "screenshots": false,
+  "video": true,
+  "screenshots": true,
   "viewportHeight": 800,
   "viewportWidth": 1280,
   "chromeWebSecurity": false,
@@ -8,9 +8,9 @@
   "defaultCommandTimeout": 7000,
   "responseTimeout": 40000,
   "pageLoadTimeout": 20000,
-  "projectId": "7darfy",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-      "configFile": "reporterOpts.json"
-  }
+    "configFile": "reporterOpts.json"
+  },
+  "projectId": "ez261q"
 }
