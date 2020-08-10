@@ -9,7 +9,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:open:ta": "cypress open --config baseUrl=http://tanis.partnersgroup.sk",
-    "cy:run:ta": "cypress run --config baseUrl=http://tanis.partnersgroup.sk"
+    "cy:run:ta": "cypress run --config baseUrl=http://tanis.partnersgroup.sk",
+    "cy:open:test": "cypress open --config baseUrl=http://testnis.partnersgroup.sk",
+    "cy:run:test": "cypress run --config baseUrl=http://testnis.partnersgroup.sk"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
