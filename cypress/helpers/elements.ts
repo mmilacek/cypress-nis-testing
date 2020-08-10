@@ -5,7 +5,7 @@ export const login = {
     password: '#frmsignInForm-password',
     button: '#frmsignInForm-login',
 
-    logout: '.fa.fa-sign-out'
+    logout: '.fa-s.fa-user'
 };
 
 export const list = {
@@ -17,13 +17,16 @@ export const list = {
 
 export const form = {
     general: {
-        header: 'h1.col-sm-6',
+        header: '.workspace-panel-header',
         
-        bookmark: '#quick-menu > :nth-child(1) > a > .fa',
-        create: '.fa.fa-plus-square',
-
-        back: ':nth-child(1) > .btn',
+        path: '.workspace-header-breadcrumbs',
+        
+        back: '.btn.btn-default',
         submit: 'button[name="action[save]"]',
+    },
+
+    list: {
+        create: '.btn.btn-create'
     },
 
     extended: {
@@ -32,7 +35,7 @@ export const form = {
 
     message: {
         submitSuccess: '.alert.alert-success',
-        submitSuccessText: 'Dáta boli úspečne uložené.',
+        submitSuccessText: 'Dáta boli úspešne uložené.',
 
         submitFail: '.alert.alert-danger',
         submitFailText: 'Vyznačené polia majú chybný vstup.',
@@ -44,8 +47,8 @@ export const form = {
 
 export const agentStatus = {
     navigate: {
-        menu: '.fa.fa-briefcase',
-        submenu: 'Agent_status'
+        menu: '.fa-s.fa-briefcase',
+        submenu: 'Stavy'
     },
 
     options: {

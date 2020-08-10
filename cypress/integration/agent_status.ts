@@ -1,4 +1,4 @@
-import generateRandomString, { generateRandomFloat, getAliasValue } from '../support/utils';
+import generateRandomString, { getAliasValue } from '../support/utils';
 import { form, agentStatus, list } from '../helpers/elements';
 
 const navigate = agentStatus.navigate;
@@ -104,7 +104,7 @@ describe('TEST: agent/status/create', () => {
             cy.fillForm(props, 'create');
 
         /*** clean the form ***/
-            cy.get(form.general.create).click();
+            cy.get(form.list.create).click();
 
         /*** check values after clean up ***/
             cy.checkEmpty(props);

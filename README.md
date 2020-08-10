@@ -7,7 +7,7 @@ UI functional, regression and visual testing of NIS in Cypress.
 Simply clone the repo and run:
 
 ```shell
-npm install
+yarn install
 ```
 
 ## Execution
@@ -15,5 +15,5 @@ npm install
 Run all tests:
 
 ```shell
-npx cypress run --env username=<username>,password=<password> --config baseUrl=<nis-url>
+yarn cy:run --env username=<username>,password=<password> --config baseUrl=<nis-url>
 ```

@@ -12,5 +12,9 @@
   "reporterOptions": {
     "configFile": "reporterOpts.json"
   },
-  "projectId": "ez261q"
+  "projectId": "ez261q",
+  "env": {
+    "allure": true,
+    "allureResultsPath": "cypress/allure/results"
+  }
 }

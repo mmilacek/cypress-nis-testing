@@ -1,0 +1,30 @@
+{
+    "data": {
+        "personal_id_type": {
+            "type": "select",
+            "id": "#personal_id_type",
+            "value": "občiansky preukaz"
+        },
+
+        "person_client__note": {
+            "type": "type",
+            "id": "#person_client__note",
+            "value": "AAA"
+        }
+    },
+
+    "expected": {
+        "fail": true,
+        "after": {
+            "clickOnOk": {
+                "action": "click",
+                "element": ".swal2-confirm.swal2-styled"
+            }
+        },
+
+        "assert": {
+            "element": "#swal2-content",
+            "text": "Chýbajúce údaje: ID poradcu, meno klienta, priezvisko klienta, osobný identifikátor, dátum narodenia, pohlavie klienta"
+        }
+    }
+}

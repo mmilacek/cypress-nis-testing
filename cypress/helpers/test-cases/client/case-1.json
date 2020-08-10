@@ -1,0 +1,36 @@
+{
+    "data": {
+        "personal_id_type": {
+            "type": "select",
+            "id": "#personal_id_type",
+            "value": "pas"
+        },
+
+        "client_category": {
+            "type": "select",
+            "id": "#person\\[client\\]\\[client_category\\]",
+            "value": "nechce spolupracovať"
+        },
+
+        "title_before": {
+            "type": "multiselect",
+            "id": "#frm > div.container-wide > div:nth-child(1) > div.col-sm-12.col-lg-6.mb-2.mx-0.blkPerson > div > div.card-body > fieldset > div:nth-child(7) > div > span > span.selection > span > ul > li > input",
+            "value": "doc."
+        }
+    },
+
+    "expected": {
+        "fail": true,
+        "after": {
+            "clickOnOk": {
+                "action": "click",
+                "element": ".swal2-confirm.swal2-styled"
+            }
+        },
+
+        "assert": {
+            "element": "#swal2-content",
+            "text": "Chýbajúce údaje: ID poradcu, meno klienta, priezvisko klienta, osobný identifikátor, dátum narodenia, pohlavie klienta"
+        }
+    }
+}

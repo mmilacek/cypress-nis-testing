@@ -1,0 +1,37 @@
+{
+    "data": {
+        "personal_id_type": {
+            "type": "select",
+            "id": "#personal_id_type",
+            "value": "pas"
+        },
+
+        "client_category": {
+            "type": "select",
+            "id": "#person\\[client\\]\\[client_category\\]",
+            "value": "nechce spolupracovať"
+        },
+
+        "agent": {
+            "type": "input-select",
+            "id": "#select2-client_agent_id-container",
+            "field": "[aria-controls=\"select2-client_agent_id-results\"]",
+            "value": "105801"
+        }
+    },
+
+    "expected": {
+        "fail": true,
+        "after": {
+            "clickOnOk": {
+                "action": "click",
+                "element": ".swal2-confirm.swal2-styled"
+            }
+        },
+
+        "assert": {
+            "element": "#swal2-content",
+            "text": "Chýbajúce údaje: meno klienta, priezvisko klienta, osobný identifikátor, dátum narodenia, pohlavie klienta"
+        }
+    }
+}

@@ -1,7 +1,6 @@
 import * as _ from 'lodash';
 import 'cypress-plugin-tab';
 
-import generateRandomString, { generateRandomFloat } from './utils';
 import { list } from '../helpers/elements';
 
 declare global {

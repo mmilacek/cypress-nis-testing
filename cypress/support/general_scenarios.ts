@@ -49,11 +49,11 @@ Cypress.Commands.add('logout', () => {
 
 Cypress.Commands.add('navigateToSub', (menuName: string, subMenuName: string) => {
     cy.get(menuName).click();
-    cy.get('.sub-menu').contains(subMenuName).click();
+    cy.get('.workspace-submenu').contains(subMenuName).click();
 });
 
 Cypress.Commands.add('create', () => {
-    cy.get(form.general.create).click();
+    cy.get(form.list.create).click();
     cy.url().should('include', '/create');
 
     cy.checkVisible(form.general);
@@ -63,9 +63,8 @@ Cypress.Commands.add('submitForm', (submitSuccess: boolean) => {
     cy.get(form.general.submit).click();
     
     if(submitSuccess){ 
-        cy.get(form.message.submitSuccess).should('exist').contains(form.message.submitSuccessText); 
-        cy.url().should('include', '/detail/');
-
+        cy.get(form.message.submitSuccess).should('exist'); 
+    
     }else{ cy.get(form.message.submitSuccess).should('not.exist'); }
 });
 

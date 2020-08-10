@@ -3,7 +3,10 @@ import './general_scenarios.ts';
 
 import './utils.ts';
 
+import '@shelex/cypress-allure-plugin';
+
 require('cypress-failed-log');
+require('@shelex/cypress-allure-plugin');
 
 Cypress.Screenshot.defaults({ screenshotOnRunFailure: true });
 
@@ -15,7 +18,7 @@ before(function(){
 Cypress.Cookies.defaults({ whitelist: 'nis_session' });
 
 after(function(){
-    cy.logout();
+    //cy.logout();
 });
 
 

@@ -142,7 +142,7 @@ describe('TEST: agent/position/create', () => {
             cy.fillForm(props, 'create');
 
         /*** clean the form ***/
-            cy.get(form.general.create).click();
+            cy.get(form.list.create).click();
 
         /*** check values after clean up ***/
             cy.checkEmpty(props);
