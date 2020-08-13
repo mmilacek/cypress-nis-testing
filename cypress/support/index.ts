@@ -8,7 +8,7 @@ import '@shelex/cypress-allure-plugin';
 require('cypress-failed-log');
 require('@shelex/cypress-allure-plugin');
 
-Cypress.Screenshot.defaults({ screenshotOnRunFailure: true });
+Cypress.Screenshot.defaults({ screenshotOnRunFailure: false });
 
 before(function(){
     cy.clearCookie('nis_session');

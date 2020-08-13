@@ -1,19 +1,17 @@
 {
-  "video": true,
-  "screenshots": true,
+  "video": false,
+  "screenshots": false,
+  
   "viewportHeight": 800,
   "viewportWidth": 1280,
+  
   "chromeWebSecurity": false,
   "X-Frame-Options": true,
+  
   "defaultCommandTimeout": 7000,
   "responseTimeout": 40000,
   "pageLoadTimeout": 20000,
 
-  "reporter": "cypress-multi-reporters",
-  "reporterOptions": {
-    "configFile": "reporterOpts.json"
-  },
-  "projectId": "ez261q",
   "env": {
     "allure": true,
     "allureResultsPath": "cypress/allure/results"
